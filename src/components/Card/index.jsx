@@ -16,12 +16,6 @@ const Card = ({
   targetScale,
 }) => {
   const container = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ["start end", "start start"],
-  });
-
-  const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
   const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
@@ -34,13 +28,14 @@ const Card = ({
         }}
         className={styles.card}
       >
-        <h2>{title}</h2>
+        <h2 className="font-bold text-center text-3xl">{title}</h2>
         <div className={styles.body}>
           <div className={styles.description}>
-            <p>{description}</p>
-            <span>
-              <a href={url} target="_blank">
-                See more
+            <p className="md:text-xl text-sm">{description}</p>
+            {/*
+            <span className="flex items-center gap-2.5 font-semibold pt-3 text-lg text-gray-300 hover:text-white transition-all duration-500 cursor-pointer underline-offset-4 decoration-2">
+              <a href="{url}" target="_blank">
+                Mehr erfahren
               </a>
               <svg
                 width="22"
@@ -55,11 +50,12 @@ const Card = ({
                 />
               </svg>
             </span>
+            */}
           </div>
 
           <div className={styles.imageContainer}>
-            <motion.div className={styles.inner} style={{ scale: imageScale }}>
-              <Image fill src={`/images/${src}`} alt="image" />
+            <motion.div className={styles.inner}>
+              <Image fill src={`/images/${src}`} alt="image" className="rounded-4xl" />
             </motion.div>
           </div>
         </div>

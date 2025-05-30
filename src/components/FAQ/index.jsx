@@ -35,14 +35,16 @@ const faqs = [
   },
 ];
 
-export default function Index() {
+export default function Index({ setCursorIsActive }) {
   return (
-    <section className="pt-32 pb-20 bg-[#FFFAFA] text-[#202020]">
-      <div className="max-w-6xl mx-auto flex flex-col xl:flex-row lg:gap-20 gap-10">
+    <section className="md:pt-40 pt-30 pb-20 bg-[#FFFAFA] text-[#202020]">
+      <div className="max-w-6xl mx-auto flex flex-col xl:flex-row lg:gap-20 gap-10 md:px-0 px-5">
         <div className="xl:mx-0 mx-10">
           <h2
             id="faq"
             className="text-6xl font-extrabold text-center xl:text-left"
+            onMouseEnter={() => setCursorIsActive(true)}
+            onMouseLeave={() => setCursorIsActive(false)}
           >
             FAQ&apos;s
           </h2>
@@ -69,7 +71,11 @@ export default function Index() {
                 {({ open }) => (
                   <div>
                     <DisclosureButton className="flex items-center justify-between w-full px-4 pt-7 text-lg text-left border-t">
-                      <span className="text-2xl font-semibold">
+                      <span
+                        onMouseEnter={() => setCursorIsActive(true)}
+                        onMouseLeave={() => setCursorIsActive(false)}
+                        className="text-2xl font-semibold"
+                      >
                         {faq.question}
                       </span>
                       {open ? (

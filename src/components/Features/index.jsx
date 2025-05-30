@@ -43,13 +43,13 @@ export default function Index({ setCursorIsActive }) {
   }, [isInView]);
 
   return (
-    <section className="w-full py-20 px-6 lg:px-24 bg-[#FFFAFA] text-[#202020]">
+    <section className="w-full py-20 px-6 md:px-24 bg-[#FFFAFA] text-[#202020]">
       <div className="max-w-5xl mx-auto grid sm:grid-cols-3 gap-11">
         {stats.map((stat, index) => (
           <motion.div
             ref={ref}
             key={index}
-            className="text-center sm:text-left max-w-md sm:max-w-full mx-auto"
+            className="text-center sm:text-left md:px-0 px-5 max-w-md sm:max-w-full mx-auto"
             onMouseEnter={() => setCursorIsActive(true)}
             onMouseLeave={() => setCursorIsActive(false)}
           >

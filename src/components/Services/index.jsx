@@ -33,7 +33,7 @@ export default function Index({ setCursorIsActive }) {
       className="w-full flex flex-col justify-center items-center pt-14 pb-6 bg-[#FFFAFA] text-[#202020]"
     >
       <div className="flex lg:items-start items-center lg:justify-start justify-center w-4/5 max-w-4xl">
-        <h2 className="py-4 px-6 text-5xl lg:text-5xl text-center font-extrabold font-heading lg:mb-13 mb-10">
+        <h2 className="py-4 px-6 text-5xl text-center font-extrabold font-heading lg:mb-13 mb-10">
           <span className="w-13 h-[3px] bg-[#202020] lg:inline-block hidden align-middle mx-3"></span>
           Unsere Leistungen
         </h2>

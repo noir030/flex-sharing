@@ -28,7 +28,7 @@ export default function Index({ setCursorIsActive }) {
         <p
           onMouseEnter={() => setCursorIsActive(true)}
           onMouseLeave={() => setCursorIsActive(false)}
-          className="lg:ml-28 lg:text-[5vw] text-[8vw] uppercase mix-blend-difference font-bold"
+          className="lg:ml-14 lg:text-[5vw] text-[8vw] uppercase mix-blend-difference font-bold"
         >
           Wie wir arbeiten
         </p>
