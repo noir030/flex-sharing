@@ -1,0 +1,117 @@
+.header {
+  position: absolute;
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  z-index: 100;
+  padding: 30px 45px;
+
+
+  .background {
+    background-color: #202020;
+    opacity: 0.6;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 100%;
+  }
+
+  .bar {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 400;
+    position: relative;
+
+    p {
+      margin: 0px;
+    }
+
+    a {
+      text-decoration: none;
+      height: 100%;
+      font-weight: 500;
+      font-size: medium;
+    }
+
+    .logoImg {
+      width: 50px; 
+      height: 50px; 
+      transition: transform 0.8s ease-in-out; 
+      margin-right: 10px;
+    }
+
+    .el {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      cursor: pointer;
+
+      .label {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        font-weight: 800;
+        font-size: medium;
+      }
+
+      h2 {
+        font-weight: 800;
+        &:nth-of-type(2) {
+          position: absolute;
+          opacity: 0;
+        }
+      }
+
+      .burger {
+        width: 22.5px;
+        position: relative;
+        pointer-events: none;
+
+        &::after,
+        &::before {
+          content: "";
+          height: 2px;
+          width: 100%;
+          background-color: white;
+          position: absolute;
+          display: block;
+          transition: all 1s cubic-bezier(0.76, 0, 0.24, 1);
+        }
+
+        &::after {
+          top: -4px;
+        }
+
+        &::before {
+          top: 4px;
+        }
+      }
+
+      .burgerActive {
+        &::after {
+          top: 0;
+          transform-origin: center;
+          transform: rotate(-45deg);
+        }
+
+        &::before {
+          top: 0;
+          transform-origin: center;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .header {
+    padding: 30px 25px;
+  }
+}
