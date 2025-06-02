@@ -4,48 +4,44 @@ import { useScroll } from "framer-motion";
 import { useRef } from "react";
 import Card from "../Card";
 
-export const projects = [
+const projects = [
   {
-    title: "Matthias Leidinger",
-    description:
-      "Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent and ideas. Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming.",
+    title: "Altbau-Sanierung in Prenzlauer Berg",
+    description: "In einem denkmalgeschützten Altbau in Prenzlauer Berg haben wir eine vollständige Sanierung durchgeführt – inklusive Elektrik, Sanitär, Wand- und Bodenarbeiten. Das Ergebnis: moderner Komfort trifft historischen Charme.",
     src: "1.jpg",
-    link: "https://www.ignant.com/2023/03/25/ad2186-matthias-leidingers-photographic-exploration-of-awe-and-wonder/",
+    link: "/",
     color: "#202020",
   },
   {
-    title: "Clément Chapillon",
-    description:
-      "This is a story on the border between reality and imaginary, about the contradictory feelings that the insularity of a rocky, arid, and wild territory provokes”—so French photographer Clément Chapillon describes his latest highly captivating project Les rochers fauves (French for ‘The tawny rocks’).",
+    title: "Modernes Bad in Charlottenburg",
+    description: "Ein kleines, in die Jahre gekommenes Badezimmer wurde in eine moderne Wellness-Oase verwandelt. Mit hochwertigen Fliesen, maßgefertigten Einbauten und durchdachter Lichtplanung.",
     src: "2.jpg",
-    link: "https://www.ignant.com/2022/09/30/clement-chapillon-questions-geographical-and-mental-isolation-with-les-rochers-fauves/",
+    link: "/",
     color: "#2B2B2B",
   },
   {
-    title: "Zissou",
-    description:
-      "Though he views photography as a medium for storytelling, Zissou’s images don’t insist on a narrative. Both crisp and ethereal, they’re encoded with an ambiguity—a certain tension—that lets the viewer find their own story within them.",
+    title: "Innenausbau in einer Neubauwohnung",
+    description: "Für eine junge Familie in Berlin-Mitte haben wir eine Neubauwohnung mit individuellen Innenausbau-Lösungen ausgestattet – inklusive Einbauschränken, Trockenbauwänden und stimmigem Farbkonzept.",
     src: "3.jpg",
-    link: "https://www.ignant.com/2023/10/28/capturing-balis-many-faces-zissou-documents-the-sacred-and-the-mundane-of-a-fragile-island/",
+    link: "/",
     color: "#1F1F1F",
   },
   {
-    title: "Mathias Svold and Ulrik Hasemann",
-    description:
-      "The coastlines of Denmark are documented in tonal colors in a pensive new series by Danish photographers Ulrik Hasemann and Mathias Svold; an ongoing project investigating how humans interact with and disrupt the Danish coast.",
+    title: "Fassadensanierung in Kreuzberg",
+    description: "Die stark verwitterte Fassade eines Mehrfamilienhauses in Kreuzberg wurde vollständig überarbeitet. Neben dem neuen Anstrich wurden auch Dämmung und Putz erneuert.",
     src: "1.jpg",
-    link: "https://www.ignant.com/2019/03/13/a-photographic-series-depicting-the-uncertain-future-of-denmarks-treasured-coastlines/",
+    link: "/",
     color: "#404040",
   },
   {
-    title: "Mark Rammers",
-    description:
-      "Dutch photographer Mark Rammers has shared with IGNANT the first chapter of his latest photographic project, ‘all over again’—captured while in residency at Hektor, an old farm in Los Valles, Lanzarote. Titled ‘Beginnings’, the mesmerizing collection of images is a visual and meditative journey into the origins of regrets and the uncertainty of stepping into new unknowns.",
+    title: "Komplettumbau eines Einfamilienhauses",
+    description: "In Berlin-Zehlendorf haben wir ein Einfamilienhaus umfassend renoviert: von der Raumaufteilung über neue Böden und Wände bis zur energieeffizienten Heiztechnik – alles aus einer Hand.",
     src: "2.jpg",
-    link: "https://www.ignant.com/2023/04/12/mark-rammers-all-over-again-is-a-study-of-regret-and-the-willingness-to-move-forward/",
+    link: "/",
     color: "#303030",
   },
 ];
+
 
 export default function Index() {
   const container = useRef(null);
